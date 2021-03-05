@@ -15,11 +15,12 @@ namespace SuperDuperAPI.Controllers
         {
             _logger = logger;
         }
-
+        [Route("allcaps")]
         [HttpGet]
-        public String Get()
+        public String Get(string lowerCase)
         {
-            return "Ta-freaking-da";
+            string upperCase = lowerCase.ToUpper(); 
+            return upperCase;
         }
     }
 }
