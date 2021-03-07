@@ -24,18 +24,18 @@ namespace SuperDuperAPI.Controllers
         }
         [Route("addStrings")]
         [HttpPost]
-        public String Post(string one, string two, Boolean space)
+        public String Post(string string1, string string2, Boolean includeSpace)
         {
-            if (space == true)
+            if (includeSpace == true)
             {
-                string phrase = string.Concat(one, " ", two);
+                string phrase = string.Concat(string1, " ", string2);
                 return phrase;
                
             }
 
             else
             {
-                string phrase = one + two;
+                string phrase = string1 + string2;
                 return phrase;
             }
 
