@@ -22,5 +22,23 @@ namespace SuperDuperAPI.Controllers
             string upperCase = lowerCase.ToUpper(); 
             return upperCase;
         }
+        [Route("addStrings")]
+        [HttpPost]
+        public String Post(string one, string two, Boolean space)
+        {
+            if (space == true)
+            {
+                string phrase = string.Concat(one, " ", two);
+                return phrase;
+               
+            }
+
+            else
+            {
+                string phrase = one + two;
+                return phrase;
+            }
+
+        }    
     }
 }
